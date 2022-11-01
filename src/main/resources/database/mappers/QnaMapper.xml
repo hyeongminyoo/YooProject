@@ -23,9 +23,14 @@
 		<include refid="search"></include>
 	</select>
 	
-	<insert id="setAdd" parameterType="QnaVO">
+	<insert id="setAdd" parameterType="QnaVO" useGeneratedKeys="true" keyProperty="num">
 		INSERT INTO QNA(NUM, TITLE, WRITER, CONTENTS, REGDATE, HIT, REF, DEPTH, STEP)
 		VALUES(null, #{title},#{writer},#{contents},sysdate(), 0, 0, 0 ,0)
+	</insert>
+	
+	<insert id="setFileAdd" parameterType="QnaFileVO">
+		INSERT INTO QNAFILE(NUM,FILENUM,FILENAME,ORINAME)
+		VALUES(#{num},null,#{fileName},#{oriName})
 	</insert>
 	
 </mapper>

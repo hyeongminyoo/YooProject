@@ -56,17 +56,19 @@
 		<nav aria-label="Page navigation example">
 			<ul class="pagination justify-content-center">
 				<li class="page-item ${pager.pre?'':'disabled'}">
-					<a class="page-link" href="./list?page=${pager.startNum-1}&kind=${pager.kind}&search=${pager.search}">이전</a>
+					<a class="page-link" href="./list?page=${pager.startNum-1}&kind=${pager.kind}&search=${pager.search}">《</a>
 				</li>
 			<c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i">
-				<li class="page-item"><a class="page-link" href="./list?page=${i}&kind=${pager.kind}&search=${pager.search}">${i}</a></li>	
+				<li class="page-item">
+					<a class="page-link" href="./list?page=${i}&kind=${pager.kind}&search=${pager.search}">${i}</a>
+				</li>	
 			</c:forEach>
 				<li>
-					<a class="page-link" href="./list?page=${pager.lastNum+1}&kind=${pager.kind}&search=${pager.search}">다음</a>
+					<a class="page-link ${pager.next?'':'disabled'}" href="./list?page=${pager.lastNum+1}&kind=${pager.kind}&search=${pager.search}">》</a>
 				</li>
 			</ul>
 		</nav>
-		
+		<a href="/qna/add">글 작성</a>
 	</div>
 </body>
 </html>
