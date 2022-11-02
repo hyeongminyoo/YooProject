@@ -1,6 +1,7 @@
 package com.hm.home.board.qna;
 
 import java.sql.Date;
+import java.util.List;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
@@ -28,5 +29,7 @@ public class QnaVO {
 	private Long step;
 	
 	private MultipartFile [] files;
+	
+	private List<QnaFileVO> qnaFileVOs;
 	
 }
