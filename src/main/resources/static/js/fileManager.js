@@ -13,7 +13,7 @@ $("#fileAdd").click(function(){
     let add = '<div class="mb-3">';
     add += '<label for="file" class="form-label">File</label>';
     add += '<input type="file" name="files">';
-    add += '<button id="deleteButton" onclick="deleteFile()">삭제</button>'
+    add += '<button id="deleteButton" onclick="deleteFile()">X</button>'
     add += '</div>';
 
     $("#files").append(add);
@@ -52,7 +52,7 @@ $("#contents").summernote({
             const contents = $("#contents").summernote('code');
             console.log(contents);
             if(contents == "<p><br></p>" || contents == "<p></p>"){
-                $("#inputContentsResult").html("내용을 입력해주세요.");
+                $("#inputContentsResult").html('<p style="color : red;">내용을 입력해주세요.</p>');
                 results[2] = false;
             }else{
                 $("#inputContentsResult").empty();

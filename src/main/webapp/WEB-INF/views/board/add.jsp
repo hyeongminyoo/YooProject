@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div class="container">
-		<h3>글쓰기</h3>
+		<h3>Add</h3>
 		<form:form action="add" method="post" modelAttribute="qnaVO" enctype="multipart/form-data" id="frm">
 	
 			<div class="mb-3">
