@@ -68,7 +68,7 @@
 				</li>
 			</ul>
 		</nav>
-		<button><a href="/qna/add">글 쓰기</a></button>
+		<a href="/qna/add" class="btn btn-primary">글쓰기</a>
 	</div>
 </body>
 </html>

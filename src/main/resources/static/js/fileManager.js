@@ -55,7 +55,7 @@ $("#contents").summernote({
                 $("#inputContentsResult").html('<p style="color : red;">내용을 입력해주세요.</p>');
                 results[2] = false;
             }else{
-                $("#inputContentsResult").empty();
+                $("#inputContentsResult").html('<p style="color : blue;">성공</p>');
                 results[2] = true;
             }
         }
