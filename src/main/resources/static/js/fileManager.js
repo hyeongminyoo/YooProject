@@ -13,12 +13,17 @@ $("#fileAdd").click(function(){
     let add = '<div class="mb-3">';
     add += '<label for="file" class="form-label">File</label>';
     add += '<input type="file" name="files">';
+    add += '<button id="deleteButton" onclick="deleteFile()">삭제</button>'
     add += '</div>';
 
     $("#files").append(add);
 
 })
 
+function deleteFile(){
+    $("#deleteButton").parent().remove();
+    count--;
+}
 
 
 let results = [false,false,false];
