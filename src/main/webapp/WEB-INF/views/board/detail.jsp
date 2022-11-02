@@ -48,12 +48,13 @@ $('#contents').summernote({
 	height : 400,
     lang : "ko-KR",
     minHeight : null,
-    maxHeight : null
+    maxHeight : null,
 });
 
 $('#contents').summernote('pasteHTML','${vo.contents}');
 
 $('#contents').next().find(".note-editable").attr("contenteditable", false);
+
 
 const toolbar = document.getElementsByClassName("note-toolbar");
 toolbar[0].setAttribute("style","display : none;");
