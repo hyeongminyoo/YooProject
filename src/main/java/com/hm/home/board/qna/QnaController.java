@@ -44,12 +44,12 @@ public class QnaController {
 	
 	@PostMapping("add")
 	public String setAdd(@Valid QnaVO qnaVO,BindingResult bindingResult) throws Exception{
-//		int result = qnaService.setAdd(qnaVO);
 		
 		if(bindingResult.hasErrors()) {
 			log.info("============QNA add 검증==============");
 			return "board/add";
 		}
+		int result = qnaService.setAdd(qnaVO);
 		
 		return "redirect:./list";
 	}
