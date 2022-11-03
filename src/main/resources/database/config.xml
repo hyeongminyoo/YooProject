@@ -6,8 +6,12 @@
 	<typeAliases>
 		<typeAlias type="com.hm.home.board.qna.QnaVO" alias="QnaVO"/>
 		<typeAlias type="com.hm.home.board.qna.QnaFileVO" alias="QnaFileVO"/>
+		
+		<typeAlias type="com.hm.home.member.MemberVO" alias="MemberVO"/>
+		<typeAlias type="com.hm.home.member.RoleVO" alias="RoleVO"/>
 		<typeAlias type="com.hm.home.util.Pager" alias="Pager"/>
 		<typeAlias type="java.lang.Long" alias="Long"/>
 		<typeAlias type="java.util.List" alias="List"/>
+		<typeAlias type="java.lang.String" alias="String"/>
 	</typeAliases>
 </configuration>
