@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <c:import url="./temp/boot.jsp"></c:import>
+<script defer src="http://localhost:83/socket.io/socket.io.js"></script>
 </head>
 <body>
 	<h3>HOME</h3>
@@ -22,6 +23,10 @@
 		<a href="/member/join">회원가입</a>
 	</sec:authorize>
 	
-	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			let socket = io("http://localhost:83");
+		})
+	</script>
 </body>
 </html>
