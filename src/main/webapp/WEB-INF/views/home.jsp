@@ -8,7 +8,23 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <c:import url="./temp/boot.jsp"></c:import>
-<script defer src="http://localhost:83/socket.io/socket.io.js"></script>
+<script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+<script defer src="/static/js/live.js"></script>
+<style>
+#chat_box {
+    width: 800px;
+    min-width: 800px;
+    height: 500px;
+    min-height: 500px;
+    border: 1px solid black;
+}
+#msg {
+    width: 700px;
+}
+#msg_process {
+    width: 90px;
+}
+</style>
 </head>
 <body>
 	<h3>HOME</h3>
@@ -23,10 +39,15 @@
 		<a href="/member/join">회원가입</a>
 	</sec:authorize>
 	
-	<script type="text/javascript">
-		$(document).ready(function(){
-			let socket = io("http://localhost:83");
-		})
-	</script>
+	<div>
+		<video id="localVideo" autoplay width="480px"></video>
+	</div>
+	
+	
+	<div id="chat_box"></div>
+	<input type="text" id="msg">
+	<button id="msg_process">전송</button>
+	
+	
 </body>
 </html>
